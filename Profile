@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <div class="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-2xl mt-10">
+      <!-- Profile Header -->
+      <div class="text-center">
+        <img
+          class="w-32 h-32 rounded-full mx-auto border-4 border-primary-500"
+          src="your-photo.jpg"
+          alt="Your Photo"
+        />
+        <h1 class="text-3xl font-bold mt-4">Your Name</h1>
+        <p class="text-gray-600">Computer Science Engineering Student | Tech Enthusiast</p>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="mt-8 space-y-2">
+        <h2 class="text-xl font-semibold">📞 Contact</h2>
+        <p>Email: yourname@example.com</p>
+        <p>Phone: +91-XXXXXXXXXX</p>
+        <p>Location: Your City, Country</p>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="mt-8">
+        <h2 class="text-xl font-semibold">🔗 Social Media</h2>
+        <div class="flex gap-4 mt-2">
+          <a href="https://github.com/yourid" class="text-blue-600 hover:underline">GitHub</a>
+          <a href="https://linkedin.com/in/yourid" class="text-blue-600 hover:underline">LinkedIn</a>
+          <a href="https://twitter.com/yourid" class="text-blue-600 hover:underline">Twitter</a>
+          <a href="https://instagram.com/yourid" class="text-blue-600 hover:underline">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Academic Info -->
+      <div class="mt-8">
+        <h2 class="text-xl font-semibold">🎓 Academic Background</h2>
+        <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li>B.Tech in Computer Science and Engineering – Your University (2023 - Present)</li>
+          <li>12th Grade – Your School Name (Year)</li>
+          <li>10th Grade – Your School Name (Year)</li>
+        </ul>
+      </div>
+    </div>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
